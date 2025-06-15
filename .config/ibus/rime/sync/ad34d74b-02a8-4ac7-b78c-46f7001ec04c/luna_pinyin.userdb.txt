@@ -1,0 +1,115 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.13.1
+#@/tick	89
+#@/user_id	ad34d74b-02a8-4ac7-b78c-46f7001ec04c
+a 	啊	c=2 d=1.86071 t=60
+an zhuang 	安裝	c=7 d=5.89871 t=86
+bu dao 	不到	c=0 d=0.1 t=60
+bu neng 	不能	c=1 d=1.09608 t=22
+bu neng xian shi 	不能顯示	c=1 d=1 t=15
+bu xing 	不行	c=0 d=0.1 t=88
+cha jian 	插件	c=2 d=1.99501 t=47
+cha kan 	查看	c=1 d=1 t=53
+cha zhao 	查找	c=0 d=0.1 t=55
+cha zhao wen jian 	查找文件	c=1 d=1 t=56
+cheng xu 	程序	c=2 d=1.96079 t=25
+ci ku 	詞庫	c=1 d=1 t=4
+dan shi 	但是	c=1 d=1 t=64
+de 	的	c=0 d=0.341095 t=84
+dei 	得	c=0 d=0.1 t=65
+di qiu 	地球	c=1 d=1 t=8
+dou 	都	c=0 d=0.1 t=88
+dou bu xing 	都不行	c=1 d=1 t=89
+fang fa 	方法	c=0 d=0.1 t=87
+gan 	幹	c=0 d=0.1 t=66
+gan jue 	感覺	c=0 d=0.1 t=62
+gan jue lai de ji 	感覺來得及	c=1 d=1 t=63
+gan yi hui 	幹一會	c=1 d=1 t=67
+gang 	剛	c=0 d=0.1 t=64
+gu ji 	估計	c=0 d=0.1 t=65
+hai 	還	c=0 d=0.1 t=60
+hai mei 	還沒	c=0 d=0.1 t=58
+hai shi 	還是	c=0 d=0.1 t=27
+he 	和	c=2 d=1.68045 t=84
+hou tai 	後臺	c=0 d=0.196079 t=23
+hou tai yun xing de 	後臺運行的	c=1 d=1 t=24
+huan jing 	環境	c=0 d=0.1 t=80
+huan jing bian liang 	環境變量	c=1 d=1 t=55
+hui 	回	c=0 d=0.1 t=28
+jiao cheng 	教程	c=1 d=1 t=26
+jin tian 	今天	c=0 d=0.1 t=27
+jin tian hai shi 	今天還是	c=1 d=1 t=28
+lai 	來	c=0 d=0.193707 t=71
+lai de ji 	來得及	c=0 d=0.1 t=62
+lai le 	來了	c=0 d=0.1 t=64
+lai shang ke le 	來上課了	c=1 d=1 t=72
+le 	了	c=0 d=0.173712 t=71
+ma ya 	媽呀	c=1 d=1 t=58
+me 	麼	c=0 d=0.1 t=84
+mei fa 	沒法	c=0 d=0.1 t=69
+mei fa shi yong 	沒法使用	c=1 d=1 t=70
+mei shi 	沒事	c=1 d=1 t=27
+ming tian 	明天	c=0 d=0.1 t=28
+ming tian hui 	明天回	c=1 d=1 t=29
+ming yue 	明月	c=1 d=1 t=5
+na 	那	c=0 d=0.1 t=60
+na me 	那麼	c=1 d=1 t=1
+na xian zai hai bu dao 	那現在還不到	c=1 d=1 t=61
+ni hao 	你好	c=1 d=1 t=44
+pa 	怕	c=1 d=1 t=34
+pei zhi 	配置	c=1 d=1 t=45
+pin yin 	拼音	c=2 d=1.98511 t=9
+qu bie 	區別	c=0 d=0.1 t=9
+ru he 	如何	c=4 d=3.5677 t=76
+shang ke 	上課	c=0 d=0.1 t=71
+shen me 	什麼	c=0 d=0.1 t=9
+shi 	是	c=1 d=1 t=83
+shi dian 	十點	c=1 d=1 t=62
+shi yong 	使用	c=2 d=2.06025 t=80
+shou dong 	手動	c=0 d=0.1 t=2
+shou dong tian jia 	手動添加	c=1 d=1 t=3
+si hu 	似乎	c=1 d=1 t=87
+ta 	他	c=0 d=0.197045 t=64
+ta gang lai le 	他剛來了	c=1 d=1 t=65
+ta hai mei lai 	他還沒來	c=1 d=1 t=59
+tian jia 	添加	c=0 d=0.1 t=2
+tuo pan 	托盤	c=2 d=1.96561 t=21
+wang yi 	網易	c=0 d=0.1 t=49
+wang yi yun 	網易雲	c=1 d=1 t=50
+wei shen me 	爲什麼	c=3 d=2.5462 t=68
+wen jian 	文件	c=0 d=0.1 t=55
+wo 	我	c=0 d=0.1 t=10
+wo an zhuang le 	我安裝了	c=2 d=1.96561 t=18
+wo de 	我的	c=1 d=1 t=71
+xian shi 	顯示	c=1 d=1.0956 t=23
+xian zai 	現在	c=0 d=0.197531 t=65
+xian zai gu ji dei 	現在估計得	c=1 d=1 t=66
+yi ge 	一個	c=1 d=1 t=54
+yi hui 	一會	c=0 d=0.1 t=66
+yi jing 	已經	c=0 d=0.1 t=77
+yi jing an zhuang de 	已經安裝的	c=1 d=1 t=78
+yi yang 	一樣	c=0 d=0.1 t=84
+yi yang de me 	一樣的麼	c=1 d=1 t=85
+yong fa 	用法	c=1 d=1 t=57
+you 	有	c=0 d=0.1 t=9
+you shen me qu bie 	有什麼區別	c=1 d=1 t=10
+yuan jiao 	圓角	c=2 d=1.9802 t=43
+yuan xing 	圓形	c=4 d=3.92136 t=42
+yun 	雲	c=0 d=0.1 t=49
+yun xing 	運行	c=0 d=0.196079 t=23
+zai 	在	c=2 d=1.99005 t=77
+zen me 	怎麼	c=1 d=1 t=51
+zhe ge 	這個	c=1 d=1 t=82
+zhe xie 	這些	c=0 d=0.1 t=87
+zhe xie fang fa 	這些方法	c=1 d=1 t=88
+zheng zai 	正在	c=0 d=0.1 t=15
+zheng zai hou tai yun xing de 	正在後臺運行的	c=1 d=1 t=16
+zhi hou 	之後	c=2 d=1.96561 t=19
+zhong 	中	c=1 d=1.09465 t=79
+zhong duan 	終端	c=0 d=0.1 t=68
+zhong duan zhong 	終端中	c=1 d=1 t=69
+zhu ti 	主題	c=2 d=1.98511 t=41
+zhuo mian 	桌面	c=0 d=0.1 t=80
+zhuo mian huan jing 	桌面環境	c=1 d=1 t=81

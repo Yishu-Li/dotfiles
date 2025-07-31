@@ -202,7 +202,7 @@
 /* clear button */
 .widget-title>button:hover {
     background: @text-color;
-    color: red;
+    color: green;
 }
 
 .widget-dnd {
@@ -215,9 +215,9 @@
 }
 
 .widget-dnd>switch {
-    border-radius: 10px;
+    border-radius: 100px;
     border: 1px solid #7aa2f7;
-    background: @noti-border-color;
+    background: @noti-bg-hover;
 }
 
 .widget-dnd>switch:checked {

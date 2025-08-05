@@ -26,6 +26,13 @@
     margin: 0px;
 }
 
+.notification-group {
+  background: @noti-bg;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 0px;
+}
+
 .notification {
 	border-radius: 10px;
 }
@@ -202,7 +209,7 @@
 /* clear button */
 .widget-title>button:hover {
     background: @text-color;
-    color: green;
+    color: @noti-bg;
 }
 
 .widget-dnd {
@@ -214,15 +221,22 @@
     color: @noti-border-color;
 }
 
+/* DND widget */
+.widget-dnd label {
+  color: @text-color;
+  margin: 8px;
+  font-size: 1.1rem;
+}
+
 .widget-dnd>switch {
     border-radius: 100px;
-    border: 1px solid #7aa2f7;
+    border: 1px solid @noti-border-color;
     background: @noti-bg-hover;
 }
 
 .widget-dnd>switch:checked {
     background: #f7768e;
-    border: 1px solid #f7768e;
+    border: 1px solid @noti-border-color;
 }
 
 .widget-dnd>switch slider {
@@ -244,11 +258,18 @@
     color: @text-color;
 }
 
+/* Mpris widget */
+:root {
+  --mpris-album-art-overlay: rgba(255, 255, 255, 0.75);
+  --mpris-button-hover: rgba(0, 0, 0, 0.2);
+  --mpris-album-art-icon-size: 96px;
+}
+
 .widget-mpris {
     color: @text-color;
     background: @noti-bg-alt;
-    padding: 1px 3px;
-    margin: 3px;
+    padding: 0px 0px;
+    margin: 8px;
     border-radius: 10px;
 }
 
@@ -258,17 +279,22 @@
 
 .widget-mpris-player {
     background-color: @noti-bg;
-    padding: 3px 6px;
-    margin: 5px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
+    padding: 0px 0px;
+    margin: 0px;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+    border: 1px solid @noti-border-color;
+}
+
+.widget-overlay{
+  background: @noti-bg;
 }
 
 .widget-mpris-album-art {
     background: @noti-bg;
     padding: 0px 0px;
     margin: 0px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .widget-mpris-title {
@@ -329,7 +355,7 @@
 }
 
 .widget-volume>box>button {
-    background: @noti-border-color;
+    background: @noti-bg;
     border: none
 }
 

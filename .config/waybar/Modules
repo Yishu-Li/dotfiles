@@ -411,6 +411,7 @@
     "(\\s*)Mozilla Firefox": "$1Firefox",
     "(\\s*)Microsoft Edge": "$1Edge",
     "(\\s*)qutebrowser": "$1qute",
+    "(\\s*)NetEase Cloud Music Gtk4": "$1Cloud Music",
     },
 },
 }

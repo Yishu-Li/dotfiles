@@ -1,0 +1,13 @@
+return {
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    opts = {
+      model = "gpt-5",
+      insert_at_end = true,
+    },
+  },
+}

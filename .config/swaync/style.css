@@ -335,6 +335,14 @@
     color: @noti-bg-hover
 }
 
+.widget-menubar .power-saver > button.toggle:checked,
+.widget-menubar #power-saver > button.toggle:checked,
+.widget-menubar .power-saver > button:active,
+.widget-menubar #power-saver > button:active {
+    background: #22c55e; /* green */
+    color: @noti-bg;
+}
+
 .widget-menubar>box>.menu-button-bar>button {
     border: none;
     background: transparent

@@ -117,11 +117,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias swayconfig="nvim ~/.config/sway/config"
-alias wezconfig="nvim ~/.wezterm.lua"
 alias sshconfig="nvim ~/.ssh/config"
 alias nvimconfig="cd ~/.config/nvim/"
 alias yaziconfig="cd ~/.config/yazi/"
+alias hyprconfig="cd ~/.config/hypr/"
 alias dotfiles="git --work-tree=$HOME --git-dir=$HOME/.dotfiles"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

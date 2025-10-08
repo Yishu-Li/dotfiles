@@ -7,10 +7,11 @@
     "45",
     "46",
     "47",
-    "48"
+    "48",
+    "49"
   ],
   "url": "https://github.com/paperwm/PaperWM",
   "uuid": "paperwm@paperwm.github.com",
-  "version": 141,
-  "version-name": "48.0.2"
+  "version": 143,
+  "version-name": "49.0.0"
 }

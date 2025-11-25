@@ -6,7 +6,7 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      model = "gpt-5",
+      model = "gemini-3-pro-preview",
       insert_at_end = true,
     },
   },

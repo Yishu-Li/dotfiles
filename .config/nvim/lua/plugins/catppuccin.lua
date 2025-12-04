@@ -1,7 +1,7 @@
 return {
   "catppuccin/nvim",
   name = "catppuccin",
-  opts = {
-    background = "latte",
-  },
+  lazy = false,
+  priority = 1000,
+  opts = { flavour = "latte" },
 }

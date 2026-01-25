@@ -34,6 +34,8 @@ return {
     keymaps = {
       show_help = "<f1>",
     },
+    -- Ensure the floating window is opaque for image preview
+    yazi_floating_window_winblend = 0,
   },
   -- 👇 if you use `open_for_directories=true`, this is recommended
   init = function()

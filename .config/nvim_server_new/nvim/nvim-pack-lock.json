@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "catppuccin": {
+      "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "mini.nvim": {
+      "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
+      "src": "https://github.com/nvim-mini/mini.nvim",
+      "version": "'stable'"
+    },
+    "nvim-lspconfig": {
+      "rev": "84b6b6c3f13cb34a6c8a0354b0da4c67d8ccf867",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "vim-tmux-navigator": {
+      "rev": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432",
+      "src": "https://github.com/christoomey/vim-tmux-navigator"
+    }
+  }
+}

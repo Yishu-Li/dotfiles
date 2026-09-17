@@ -1,0 +1,25 @@
+# Theme
+theme = Catppuccin Latte
+window-theme = light
+
+# Hind title bar
+macos-titlebar-style = hidden
+# window-decoration = none
+
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+# Window
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+
+# Shell integration
+shell-integration = detect
+
+# Opacity
+background-opacity = 0.9
+
+# Selection
+copy-on-select = clipboard

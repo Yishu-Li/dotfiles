@@ -5,15 +5,15 @@ local map = vim.keymap.set
 -- ------------------------------------------------------------
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", {
-  desc = "Clear search highlight",
+	desc = "Clear search highlight",
 })
 
 map("n", "<leader>w", "<cmd>write<CR>", {
-  desc = "Save",
+	desc = "Save",
 })
 
 map("n", "<leader>q", "<cmd>quit<CR>", {
-  desc = "Quit",
+	desc = "Quit",
 })
 
 -- ------------------------------------------------------------
@@ -21,37 +21,37 @@ map("n", "<leader>q", "<cmd>quit<CR>", {
 -- ------------------------------------------------------------
 
 map("n", "<S-BS>", function()
-  vim.api.nvim_buf_delete(0, { force = false })
+	vim.api.nvim_buf_delete(0, { force = false })
 end, {
-  desc = "Delete buffer",
+	desc = "Delete buffer",
 })
 
 map("n", "<C-BS>", "<cmd>close<CR>", {
-  desc = "Close window",
+	desc = "Close window",
 })
 
 map("n", "<leader>bn", "<cmd>enew<CR>", {
-  desc = "New buffer",
+	desc = "New buffer",
 })
 
 map("n", "<leader>bd", function()
-  vim.api.nvim_buf_delete(0, { force = false })
+	vim.api.nvim_buf_delete(0, { force = false })
 end, {
-  desc = "Delete buffer",
+	desc = "Delete buffer",
 })
 
 map("n", "<leader>bb", function()
-  MiniPick.builtin.buffers()
+	MiniPick.builtin.buffers()
 end, {
-  desc = "Buffers",
+	desc = "Buffers",
 })
 
 map("n", "<S-l>", "<cmd>bnext<CR>", {
-  desc = "Next buffer",
+	desc = "Next buffer",
 })
 
 map("n", "<S-h>", "<cmd>bprevious<CR>", {
-  desc = "Previous buffer",
+	desc = "Previous buffer",
 })
 
 -- ------------------------------------------------------------
@@ -70,38 +70,38 @@ map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
 -- ------------------------------------------------------------
 
 map("n", "<leader>ff", function()
-  MiniPick.builtin.files()
+	MiniPick.builtin.files()
 end, {
-  desc = "Find files",
+	desc = "Find files",
 })
 
 map("n", "<leader>fg", function()
-  MiniPick.builtin.grep_live()
+	MiniPick.builtin.grep_live()
 end, {
-  desc = "Live grep",
+	desc = "Live grep",
 })
 
 map("n", "<leader>fb", function()
-  MiniPick.builtin.buffers()
+	MiniPick.builtin.buffers()
 end, {
-  desc = "Buffers",
+	desc = "Buffers",
 })
 
 map("n", "<leader>fh", function()
-  MiniPick.builtin.help()
+	MiniPick.builtin.help()
 end, {
-  desc = "Help",
+	desc = "Help",
 })
 
 -- Lightweight file browser inside Neovim.
 map("n", "<leader>fm", function()
-  local path = vim.api.nvim_buf_get_name(0)
-  if path == "" then
-    path = vim.uv.cwd()
-  end
-  MiniFiles.open(path, true)
+	local path = vim.api.nvim_buf_get_name(0)
+	if path == "" then
+		path = vim.uv.cwd()
+	end
+	MiniFiles.open(path, true)
 end, {
-  desc = "Mini files",
+	desc = "Mini files",
 })
 
 -- ------------------------------------------------------------
@@ -109,15 +109,53 @@ end, {
 -- ------------------------------------------------------------
 
 map({ "n", "v" }, "<leader>yz", "<cmd>Yazi<CR>", {
-  desc = "Yazi current file",
+	desc = "Yazi current file",
 })
 
 map("n", "<leader>yw", "<cmd>Yazi cwd<CR>", {
-  desc = "Yazi working directory",
+	desc = "Yazi working directory",
 })
 
 map("n", "<C-Up>", "<cmd>Yazi toggle<CR>", {
-  desc = "Resume Yazi",
+	desc = "Resume Yazi",
+})
+
+-- ------------------------------------------------------------
+-- GitSign
+-- ------------------------------------------------------------
+
+map("n", "]h", function()
+	require("gitsigns").nav_hunk("next")
+end, {
+	desc = "Next hunk",
+})
+
+map("n", "[h", function()
+	require("gitsigns").nav_hunk("prev")
+end, {
+	desc = "Previous hunk",
+})
+
+map("n", "<leader>gp", require("gitsigns").preview_hunk, {
+	desc = "Preview hunk",
+})
+
+map("n", "<leader>gs", require("gitsigns").stage_hunk, {
+	desc = "Stage hunk",
+})
+
+map("n", "<leader>gr", require("gitsigns").reset_hunk, {
+	desc = "Reset hunk",
+})
+
+map("n", "<leader>gb", function()
+	require("gitsigns").blame_line({ full = true })
+end, {
+	desc = "Blame line",
+})
+
+map("n", "<leader>gg", "<cmd>Git status<CR>", {
+	desc = "Git status",
 })
 
 -- ------------------------------------------------------------
@@ -125,19 +163,19 @@ map("n", "<C-Up>", "<cmd>Yazi toggle<CR>", {
 -- ------------------------------------------------------------
 
 map("n", "<leader>e", vim.diagnostic.open_float, {
-  desc = "Diagnostic",
+	desc = "Diagnostic",
 })
 
 map("n", "[d", function()
-  vim.diagnostic.jump({ count = -1 })
+	vim.diagnostic.jump({ count = -1 })
 end, {
-  desc = "Previous diagnostic",
+	desc = "Previous diagnostic",
 })
 
 map("n", "]d", function()
-  vim.diagnostic.jump({ count = 1 })
+	vim.diagnostic.jump({ count = 1 })
 end, {
-  desc = "Next diagnostic",
+	desc = "Next diagnostic",
 })
 
 -- ------------------------------------------------------------
@@ -145,23 +183,23 @@ end, {
 -- ------------------------------------------------------------
 
 map("n", "gd", vim.lsp.buf.definition, {
-  desc = "Go to definition",
+	desc = "Go to definition",
 })
 
 map("n", "gr", vim.lsp.buf.references, {
-  desc = "References",
+	desc = "References",
 })
 
 map("n", "K", vim.lsp.buf.hover, {
-  desc = "Hover documentation",
+	desc = "Hover documentation",
 })
 
 map("n", "<leader>rn", vim.lsp.buf.rename, {
-  desc = "Rename",
+	desc = "Rename",
 })
 
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {
-  desc = "Code action",
+	desc = "Code action",
 })
 
 -- ------------------------------------------------------------
@@ -169,10 +207,10 @@ map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {
 -- ------------------------------------------------------------
 
 map({ "n", "v" }, "<leader>cf", function()
-  require("conform").format({
-    async = true,
-    lsp_format = "fallback",
-  })
+	require("conform").format({
+		async = true,
+		lsp_format = "fallback",
+	})
 end, {
-  desc = "Format",
+	desc = "Format",
 })

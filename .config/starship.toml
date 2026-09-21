@@ -1,0 +1,319 @@
+# Catppuccin Latte / light transparent terminal
+# Tuned for Ghostty background-opacity = 0.8
+
+add_newline = false
+continuation_prompt = "[▸▹ ](<bold #40a02b>)"
+
+format = """($nix_shell$container$fill$git_metrics\n)$cmd_duration\
+$hostname\
+$localip\
+$shlvl\
+$shell\
+$env_var\
+$jobs\
+$sudo\
+$username\
+$character"""
+
+right_format = """
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$crystal\
+$custom\
+$status\
+$os\
+$battery\
+$time"""
+
+[fill]
+symbol = ' '
+
+[character]
+format = "$symbol "
+success_symbol = "[◎](<bold italic #40a02b>)"
+error_symbol = "[○](<italic #d20f39>)"
+vimcmd_symbol = "[■](<italic dimmed #179299>)"
+
+# not supported in zsh
+
+vimcmd_replace_one_symbol = "◌"
+vimcmd_replace_symbol = "□"
+vimcmd_visual_symbol = "▼"
+
+[env_var.VIMSHELL]
+format = "[$env_value]($style)"
+style = '#179299 italic'
+
+[sudo]
+format = "[$symbol]($style)"
+style = "bold italic #8839ef"
+symbol = "⋈┈"
+disabled = false
+
+[username]
+style_user = "#40a02b bold italic"
+style_root = "#d20f39 bold italic"
+format = "[⭘ $user]($style) "
+disabled = false
+show_always = false
+
+[directory]
+home_symbol = "⌂"
+truncation_length = 2
+truncation_symbol = "□ "
+read_only = " ◈"
+use_os_path_sep = true
+style = "italic #179299"
+format = '[$path]($style)[$read_only]($read_only_style)'
+repo_root_style = 'bold #40a02b'
+repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) [△](<bold #40a02b>)'
+
+[cmd_duration]
+min_time = 0
+format = "[◄ $duration ](<italic #5c5f77>)"
+
+[jobs]
+format = "[$symbol$number]($style) "
+style = "#5c5f77"
+symbol = "[▶](<#179299 italic>)"
+
+[localip]
+ssh_only = true
+format = " ◯[$localipv4](<bold #209fb5>)"
+disabled = false
+
+[time]
+disabled = false
+format = "[ $time]($style)"
+time_format = "%R"
+utc_time_offset = "local"
+style = "italic dimmed #5c5f77"
+
+[battery]
+format = "[ $percentage $symbol]($style)"
+full_symbol = "█"
+charging_symbol = "[↑](<italic bold #40a02b>)"
+discharging_symbol = "↓"
+unknown_symbol = "░"
+empty_symbol = "▃"
+
+[[battery.display]]
+threshold = 20
+style = "italic bold #d20f39"
+
+[[battery.display]]
+threshold = 60
+style = "italic dimmed #179299"
+
+[[battery.display]]
+threshold = 70
+style = "italic dimmed #df8e1d"
+
+[git_branch]
+format = " [$branch(:$remote_branch)]($style)"
+symbol = "[△](<bold italic #40a02b>)"
+style = "italic #179299"
+truncation_symbol = "⋯"
+truncation_length = 11
+ignore_branches = ["main", "master"]
+only_attached = true
+
+[git_metrics]
+format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
+added_style = 'italic dimmed #40a02b'
+deleted_style = 'italic dimmed #d20f39'
+ignore_submodules = true
+disabled = false
+
+[git_status]
+style = "bold italic #179299"
+format = "([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"
+conflicted = "[◪◦](<italic #8839ef>)"
+ahead = "[▴│[${count}](<bold #4c4f69>)│](italic #40a02b)"
+behind = "[▿│[${count}](<bold #4c4f69>)│](italic #d20f39)"
+diverged = "[◇ ▴┤[${ahead_count}](<regular #4c4f69>)│▿┤[${behind_count}](<regular #4c4f69>)│](italic #8839ef)"
+untracked = "[◌◦](<italic #df8e1d>)"
+stashed = "[◃◈](<italic #5c5f77>)"
+modified = "[●◦](<italic #fe640b>)"
+staged = "[▪┤[$count](<bold)│](italic #179299)"
+renamed = "[◎◦](<italic #209fb5>)"
+deleted = "[✕](<italic #d20f39>)"
+
+[deno]
+format = " [deno](italic) [∫ $version](<#40a02b bold>)"
+version_format = "${raw}"
+
+[lua]
+format = " [lua](italic) [${symbol}${version}]($style)"
+version_format = "${raw}"
+symbol = "⨀ "
+style = "bold #179299"
+
+[nodejs]
+format = " [node](italic) [◫ ($version)](<bold #40a02b>)"
+version_format = "${raw}"
+detect_files = ["package-lock.json", "yarn.lock"]
+detect_folders = ["node_modules"]
+detect_extensions = []
+
+[python]
+format = " [py](italic) [${symbol}${version}]($style)"
+symbol = "[⌉](<bold #209fb5>)⌊ "
+version_format = "${raw}"
+style = "bold #40a02b"
+
+[ruby]
+format = " [rb](italic) [${symbol}${version}]($style)"
+symbol = "◆ "
+version_format = "${raw}"
+style = "bold #d20f39"
+
+[rust]
+format = " [rs](italic) [$symbol$version]($style)"
+symbol = "⊃ "
+version_format = "${raw}"
+style = "bold #fe640b"
+
+[package]
+format = " [pkg](<italic dimmed>) [$symbol$version]($style)"
+version_format = "${raw}"
+symbol = "◨ "
+style = "dimmed #df8e1d italic bold"
+
+[swift]
+format = " [sw](italic) [${symbol}${version}]($style)"
+symbol = "◁ "
+style = "bold #e64553"
+version_format = "${raw}"
+
+[aws]
+disabled = true
+format = " [aws](italic) [$symbol $profile $region]($style)"
+style = "bold #209fb5"
+symbol = "▲ "
+
+[buf]
+symbol = "■ "
+format = " [buf](italic) [$symbol $version $buf_version](fg:#209fb5 bold)"
+
+[c]
+symbol = "ℂ "
+format = " [$symbol($version(-$name))](fg:#179299 bold)"
+
+[conda]
+symbol = "◯ "
+format = " conda [$symbol$environment](fg:#40a02b)"
+
+[dart]
+symbol = "◁◅ "
+format = " dart [$symbol($version )](fg:#209fb5)"
+
+[docker_context]
+symbol = "◧ "
+format = " docker [$symbol$context](fg:#209fb5)"
+
+[elixir]
+symbol = "△ "
+format = " exs [$symbol $version OTP $otp_version ](fg:#8839ef)"
+
+[elm]
+symbol = "◩ "
+format = " elm [$symbol($version )](fg:#179299)"
+
+[golang]
+symbol = "∩ "
+format = " go [$symbol($version )](fg:#179299)"
+
+[haskell]
+symbol = "❯λ "
+format = " hs [$symbol($version )](fg:#8839ef)"
+
+[java]
+symbol = "∪ "
+format = " java [${symbol}(${version} )](fg:#e64553)"
+
+[julia]
+symbol = "◎ "
+format = " jl [$symbol($version )](fg:#8839ef)"
+
+[memory_usage]
+symbol = "▪▫▪ "
+format = " mem [${ram}( ${swap})](fg:#179299)"
+
+[nim]
+symbol = "▴▲▴ "
+format = " nim [$symbol($version )](fg:#df8e1d)"
+
+[nix_shell]
+style = 'bold italic dimmed #209fb5'
+symbol = '✶'
+format = '[$symbol nix⎪$state⎪]($style) [$name](<italic dimmed #5c5f77>)'
+impure_msg = '[⌽](<bold dimmed #d20f39>)'
+pure_msg = '[⌾](<bold dimmed #40a02b>)'
+unknown_msg = '[◌](<bold dimmed #df8e1d>)'
+
+[spack]
+symbol = "◇ "
+format = " spack [$symbol$environment](fg:#179299)"

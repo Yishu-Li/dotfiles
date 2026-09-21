@@ -49,7 +49,7 @@ outer.right = 8
 # ------------------------------------------------------------
 
 # Open a NEW kitty window
-alt-enter = 'exec-and-forget open -na kitty'
+alt-enter = 'exec-and-forget kitty -1 -d ~'
 
 # Open Zen browser
 alt-b = 'exec-and-forget open -a "Zen"'
@@ -109,6 +109,7 @@ alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-d = 'workspace --auto-back-and-forth D'
+alt-m = 'workspace --auto-back-and-forth M'
 
 # Move current window to workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -117,6 +118,7 @@ alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-d = 'move-node-to-workspace D'
+alt-shift-m = 'move-node-to-workspace M'
 
 alt-leftSquareBracket = 'list-workspaces --monitor focused --empty no | workspace --stdin --wrap-around prev'
 alt-rightSquareBracket = 'list-workspaces --monitor focused --empty no | workspace --stdin --wrap-around next'
@@ -177,3 +179,7 @@ run = 'move-node-to-workspace D'
 [[on-window-detected]]
 if.app-id = 'com.tencent.qq'
 run = 'move-node-to-workspace D'
+
+[[on-window-detected]]
+if.app-id = 'com.netease.163music'
+run = 'move-node-to-workspace M'
